@@ -841,7 +841,7 @@ GenF1.menu.upload_method.hidMethod=HID Bootloader 2.2
 GenF1.menu.upload_method.hidMethod.upload.protocol=hid22
 GenF1.menu.upload_method.hidMethod.upload.tool=hid_upload
 GenF1.menu.upload_method.hidMethod.build.flash_offset=0x800
-GenF1.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}                         
+GenF1.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}
 
 GenF1.menu.upload_method.dfu2Method=Maple DFU Bootloader 2.0
 GenF1.menu.upload_method.dfu2Method.upload.protocol=maple
@@ -1011,7 +1011,7 @@ GenF4.menu.upload_method.hidMethod=HID Bootloader 2.2
 GenF4.menu.upload_method.hidMethod.upload.protocol=hid22
 GenF4.menu.upload_method.hidMethod.upload.tool=hid_upload
 GenF4.menu.upload_method.hidMethod.build.flash_offset=0x4000
-GenF4.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}                                                                                                        
+GenF4.menu.upload_method.hidMethod.build.bootloader_flags=-DBL_HID -DVECT_TAB_OFFSET={build.flash_offset}
 
 ################################################################################
 # Generic L0
@@ -1034,6 +1034,12 @@ GenL0.menu.pnum.THUNDER_PACK.build.product_line=STM32L072xx
 GenL0.menu.pnum.THUNDER_PACK.build.variant=THUNDER_PACK
 
 # Upload menu
+GenL0.menu.upload_method.dfuUtil=DFU Util
+GenL0.menu.upload_method.dfuUtil.upload.tool=dfu_util
+GenL0.menu.upload_method.dfuUtil.upload.protocol=
+GenL0.menu.upload_method.dfuUtil.upload.usbID=0483:df11
+GenL0.menu.upload_method.dfuUtil.upload.address=0x08000000:leave
+
 GenL0.menu.upload_method.swdMethod=STM32CubeProgrammer (SWD)
 GenL0.menu.upload_method.swdMethod.upload.protocol=0
 GenL0.menu.upload_method.swdMethod.upload.options=-g
@@ -1297,7 +1303,7 @@ Genericflight.build.series=STM32F1xx
 Genericflight.build.cmsis_lib_gcc=arm_cortexM3l_math
 Genericflight.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} {build.bootloader_flags}
 
-# AfroFlight Rev5 
+# AfroFlight Rev5
 Genericflight.menu.pnum.AFROFLIGHT_F103CB=Afro Flight Rev5 (8MHz)
 Genericflight.menu.pnum.AFROFLIGHT_F103CB.upload.maximum_size=131072
 Genericflight.menu.pnum.AFROFLIGHT_F103CB.upload.maximum_data_size=20480
