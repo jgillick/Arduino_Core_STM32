@@ -1016,7 +1016,7 @@ GenL0.name=Generic STM32L0 series
 GenL0.build.vid=0x0483
 GenL0.build.core=arduino
 GenL0.build.board=GenL0
-GenL0.build.extra_flags={build.usb_flags} -DUSBD_USE_CDC -D{build.product_line} {build.enable_usb} {build.xSerial} -D__CORTEX_SC=0
+GenL0.build.extra_flags=-D{build.product_line} {build.enable_usb} {build.xSerial} -D__CORTEX_SC=0
 GenL0.build.mcu=cortex-m0plus
 GenL0.build.series=STM32L0xx
 GenL0.build.cmsis_lib_gcc=arm_cortexM0l_math
@@ -1599,6 +1599,14 @@ GenF4.menu.xusb.HS=High Speed
 GenF4.menu.xusb.HS.build.usb_speed=-DUSE_USB_HS
 GenF4.menu.xusb.HSFS=High Speed in Full Speed mode
 GenF4.menu.xusb.HSFS.build.usb_speed=-DUSE_USB_HS -DUSE_USB_HS_IN_FS
+
+GenL0.menu.usb.none=None
+GenL0.menu.usb.CDCgen=CDC (generic 'Serial' supersede U(S)ART)
+GenL0.menu.usb.CDCgen.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC
+GenL0.menu.usb.CDC=CDC (no generic 'Serial')
+GenL0.menu.usb.CDC.build.enable_usb={build.usb_flags} -DUSBD_USE_CDC -DDISABLE_GENERIC_SERIALUSB
+GenL0.menu.usb.HID=HID (keyboard and mouse)
+GenL0.menu.usb.HID.build.enable_usb={build.usb_flags} -DUSBD_USE_HID_COMPOSITE
 
 Sparky.menu.usb.none=None
 Sparky.menu.usb.CDCgen=CDC (generic 'Serial' supersede U(S)ART)
