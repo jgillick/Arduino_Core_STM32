@@ -1030,7 +1030,7 @@ GenL0.menu.pnum.THUNDER_PACK.build.product_line=STM32L072xx
 GenL0.menu.pnum.THUNDER_PACK.build.variant=THUNDER_PACK
 
 # Upload menu
-GenL0.menu.upload_method.dfuUtil=DFU Util
+GenL0.menu.upload_method.dfuUtil=USB (dfu-util)
 GenL0.menu.upload_method.dfuUtil.upload.tool=dfu_util
 GenL0.menu.upload_method.dfuUtil.upload.protocol=
 GenL0.menu.upload_method.dfuUtil.upload.usbID=0483:df11
